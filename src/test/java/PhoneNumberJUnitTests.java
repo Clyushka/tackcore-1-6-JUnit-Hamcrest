@@ -12,11 +12,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class PhoneNumberJUnitTests {
-    private PhoneNumber sut;
+    private PhoneNumber systemUnderTest;
 
     @BeforeEach
     public void init() {
-        sut = new PhoneNumber();
+        systemUnderTest = new PhoneNumber();
         System.out.println("test is started");
     }
 
@@ -41,7 +41,7 @@ public class PhoneNumberJUnitTests {
         //arrange
         String expected = "+7 999-999-99-99";
         //act
-        String result = sut.getPhoneNumber();
+        String result = systemUnderTest.getPhoneNumber();
         //assert
         assertEquals(expected, result);
     }
@@ -50,7 +50,7 @@ public class PhoneNumberJUnitTests {
     @MethodSource("setParamsSourceFactory")
     public void setPhoneNumberTest(String phoneNumber, boolean expected) {
         //act
-        boolean result = sut.setPhoneNumber(phoneNumber);
+        boolean result = systemUnderTest.setPhoneNumber(phoneNumber);
         //assert
         assertEquals(expected, result);
     }

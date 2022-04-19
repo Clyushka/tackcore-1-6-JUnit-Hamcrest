@@ -1,0 +1,19 @@
+# мусорные файлы
+*_old
+*_backup
+*.bak
+*.DS_Store
+*.class
+Thumbs.db
+
+#maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.idea/

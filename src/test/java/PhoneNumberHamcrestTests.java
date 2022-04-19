@@ -12,11 +12,11 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
 public class PhoneNumberHamcrestTests {
-    private PhoneNumber sut;
+    private PhoneNumber systemUnderTest;
 
     @BeforeEach
     public void init() {
-        sut = new PhoneNumber();
+        systemUnderTest = new PhoneNumber();
         System.out.println("test is started");
     }
 
@@ -35,7 +35,7 @@ public class PhoneNumberHamcrestTests {
     @Test
     public void getPhoneNumberTest() {
         assertThat(
-                sut.getPhoneNumber(),
+                systemUnderTest.getPhoneNumber(),
                 equalTo("+7 999-999-99-99")
         );
     }
@@ -44,7 +44,7 @@ public class PhoneNumberHamcrestTests {
     @MethodSource("setParamsSourceFactory")
     public void setPhoneNumberTest(String phoneNumber, boolean expected) {
         assertThat(
-                sut.setPhoneNumber(phoneNumber),
+                systemUnderTest.setPhoneNumber(phoneNumber),
                 equalTo(expected)
         );
     }
@@ -52,7 +52,7 @@ public class PhoneNumberHamcrestTests {
     @Test
     public void setPhoneNumberTest() {
         assertThat(
-                sut.setPhoneNumber("+7 906 567 4567"),
+                systemUnderTest.setPhoneNumber("+7 906 567 4567"),
                 is(true)
         );
     }
